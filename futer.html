@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+     #content {
+        text-align: center;
+        
+    }
+    body{
+        font-family:'고딕';
+        color:rgb(0, 255, 255);
+        font-size:15px;
+    }
+    h2{
+        font-family:'고딕';
+        color:rgb(0, 255, 255);
+        font-size: 160px;
+    }
+    span{
+        font-family:'고딕';
+        color:rgb(255, 255, 255);
+        font-size: 15px;
+        font-weight: bold;
+    }
+    header{
+        width: 1140px;
+        height: 100px;
+        margin: 0 auto;
+        
+    }
+    #logo{
+        float: left;
+        margin:20px 0 0 20px;
+        
+    }
+    #menus{
+        float: right;
+    }
+    #main_menu a {
+        
+    text-decoration: none; 
+    color: rgb(0, 255, 255); 
+    font-family: '고딕'; 
+    font-size: 20px;
+}
+    #main_menu li{
+        display: inline;
+        margin-left: 80px;
+    }
+    table,tr,th,td{
+            border: solid 1px rgb(0, 255, 255);
+            border-collapse: collapse;
+            padding: 8px;
+            width: 50%;
+            margin: 0 auto;
+        }
+    #content {
+    text-align: center;
+}
+    </style>
+    
+</head>
+<body bgcolor='#212121'>
+    <header>
+        <div id="logo">
+            <img src="logo.png"width="50">
+        </div>
+        <nav id="menus">
+        <ul id="main_menu">
+          <li><a href='index.html'>나</a></li>
+            <li><a href='past.html'>과거</a></li>
+            <li><a href='p.html'>현재</a></li>
+            <li><a href='pf.html'>현재가 과거에게</a></li>
+            <li><a href='futer.html'>타임캡슐</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main id="content">
+    <img id="myImage" src="letter.png" title="미래의 서영이에게..." alt="현재 이미지" style="width: 600px;margin-bottom: 20px;">
+
+    <button onclick="changeImage()">편지닫기/열기</button>
+
+    <script>
+        function changeImage() {
+            const imageElement = document.getElementById('myImage');
+            
+            const currentSrc = imageElement.src;
+        
+            const currentFileName = currentSrc.substring(currentSrc.lastIndexOf('/') + 1);
+
+            if (currentFileName === 'letter.png') { 
+                imageElement.src = 'logo.png';
+            } else {
+                imageElement.src = 'letter.png';
+            }
+        }
+    </script>
+    </main>
+</body>
+</html>
